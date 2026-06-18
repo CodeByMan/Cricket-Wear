@@ -1,0 +1,49 @@
+{
+  "name": "cricket-wear-store-frontend",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Modern Vite React frontend for Cricket Wear Store, maintained by Muhammad Ali Nawaz.",
+  "author": "Muhammad Ali Nawaz",
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/icons-material": "^5.15.20",
+    "@mui/material": "^5.15.20",
+    "@mui/styles": "^5.15.20",
+    "@mui/x-data-grid": "^6.20.4",
+    "@redux-devtools/extension": "^3.3.0",
+    "@stripe/react-stripe-js": "^3.10.0",
+    "@stripe/stripe-js": "^8.3.0",
+    "axios": "^1.13.2",
+    "framer-motion": "^12.23.24",
+    "highcharts": "^12.4.0",
+    "highcharts-react-official": "^3.2.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-helmet": "^6.1.0",
+    "react-material-ui-carousel": "^3.4.2",
+    "react-redux": "^9.2.0",
+    "react-router-dom": "^5.3.4",
+    "redux": "^5.0.1",
+    "redux-thunk": "^3.1.0",
+    "sass": "^1.94.2",
+    "styled-components": "^6.1.19",
+    "swiper": "^12.0.3",
+    "web-vitals": "^5.1.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.0.2",
+    "vite": "^8.0.0",
+    "vite-plugin-svgr": "^5.2.0"
+  },
+  "scripts": {
+    "prestart": "vite build",
+    "start": "vite preview --host 0.0.0.0 --port 3000",
+    "dev": "vite --host 0.0.0.0 --port 3000",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0 --port 3000"
+  },
+  "engines": {
+    "node": ">=20.19.0 <=22.x"
+  }
+}

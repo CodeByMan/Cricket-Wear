@@ -1,0 +1,683 @@
+.reviewsPage {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem 1rem 2rem;
+  background: linear-gradient(180deg, #ffffff 0%, #fff7f7 45%, #ffffff 100%);
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: "Roboto", sans-serif;
+}
+
+.reviewsSidebar {
+  width: 20%;
+  min-width: 230px;
+  max-width: 280px;
+  height: fit-content;
+  background-color: #ffffff;
+  border: 1px solid rgba(227, 6, 5, 0.12);
+  border-radius: 18px;
+  box-shadow: 0 14px 34px rgba(227, 6, 5, 0.08);
+  overflow: hidden;
+  position: sticky;
+  top: 1rem;
+  flex-shrink: 0;
+}
+
+.reviewsMain {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.reviewsNavbar {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+/* force admin navbar to never be clipped */
+.reviewsNavbar nav {
+  position: relative;
+  top: 0;
+  z-index: 20;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.reviewsHero {
+  width: 100%;
+  padding: 1.3rem 1.4rem;
+  border-radius: 22px;
+  background: linear-gradient(
+    135deg,
+    rgba(18, 18, 18, 0.96),
+    rgba(227, 6, 5, 0.86)
+  );
+  color: #ffffff;
+  box-shadow: 0 16px 38px rgba(227, 6, 5, 0.18);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.reviewsHero::after {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  right: -80px;
+  top: -90px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.reviewsHeroContent {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+}
+
+.reviewsBadge {
+  width: fit-content;
+  margin: 0 0 0.7rem;
+  padding: 0.38rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.reviewsHero h1 {
+  margin: 0;
+  color: #ffffff;
+  font-family: "Archivo", sans-serif;
+  font-size: clamp(1.65rem, 4vw, 2.7rem);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.7px;
+}
+
+.reviewsHero p {
+  max-width: 660px;
+  margin: 0.7rem 0 0;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  font-weight: 500;
+}
+
+.reviewsHeroIcon {
+  position: relative;
+  z-index: 1;
+  width: 74px;
+  height: 74px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.reviewsHeroIcon svg {
+  font-size: 2.4rem;
+}
+
+/* =========================
+   STATS
+========================= */
+
+.reviewsStats {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.reviewStatCard {
+  min-height: 105px;
+  padding: 1rem;
+  border-radius: 18px;
+  background: #ffffff;
+  border: 1px solid rgba(227, 6, 5, 0.12);
+  box-shadow: 0 12px 28px rgba(227, 6, 5, 0.07);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.reviewStatIcon {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: rgba(227, 6, 5, 0.1);
+  color: #e30605;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.reviewStatIcon svg {
+  font-size: 1.8rem;
+}
+
+.reviewStatCard span {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: #555555;
+  font-size: 0.82rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.reviewStatCard strong {
+  color: #121212;
+  font-family: "Archivo", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+/* =========================
+   SEARCH + TABLE CARDS
+========================= */
+
+.reviewsSearchCard,
+.reviewsTableCard {
+  width: 100%;
+  padding: 1.2rem;
+  border-radius: 22px;
+  background: #ffffff;
+  border: 1px solid rgba(227, 6, 5, 0.12);
+  box-shadow: 0 14px 34px rgba(227, 6, 5, 0.08);
+  box-sizing: border-box;
+}
+
+.reviewsSearchHeader,
+.reviewsTableHeader {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 18px;
+  background: rgba(227, 6, 5, 0.035);
+  border: 1px solid rgba(227, 6, 5, 0.1);
+  box-sizing: border-box;
+}
+
+.reviewsSearchHeader h2,
+.reviewsTableHeader h2 {
+  margin: 0;
+  color: #121212;
+  font-family: "Archivo", sans-serif;
+  font-size: 1.35rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.3px;
+}
+
+.reviewsSearchHeader p,
+.reviewsTableHeader p {
+  margin: 0.35rem 0 0;
+  color: #555555;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.reviewsSearchForm {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 190px;
+  align-items: end;
+  gap: 1rem;
+}
+
+.reviewsInputBox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.reviewsInputBox label {
+  color: #121212;
+  font-size: 0.82rem;
+  font-weight: 900;
+  letter-spacing: 0.35px;
+  text-transform: uppercase;
+}
+
+.reviewsInputWrap {
+  width: 100%;
+  height: 52px;
+  position: relative;
+}
+
+.reviewsInputWrap input {
+  width: 100%;
+  height: 52px;
+  border: 1px solid rgba(227, 6, 5, 0.22);
+  outline: none;
+  background: #ffffff;
+  color: #121212;
+  border-radius: 14px;
+  padding: 0 3.1rem 0 1rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.reviewsInputWrap input:focus {
+  border-color: #e30605;
+  box-shadow: 0 0 0 4px rgba(227, 6, 5, 0.08);
+}
+
+.reviewsInputWrap input::placeholder {
+  color: #8a8a8a;
+  font-weight: 500;
+}
+
+.reviewsInputWrap svg {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #e30605;
+  pointer-events: none;
+  font-size: 1.25rem;
+}
+
+.reviewsSearchButton {
+  height: 52px;
+  border: 2px solid #e30605;
+  border-radius: 999px;
+  background: #e30605;
+  color: #ffffff;
+  box-shadow: 0 10px 24px rgba(227, 6, 5, 0.22);
+  font-size: 0.84rem;
+  font-weight: 900;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.reviewsSearchButton:hover {
+  background: #ffffff;
+  color: #e30605;
+}
+
+.reviewsSearchButton:disabled {
+  background: #eeeeee;
+  color: #999999;
+  border-color: #eeeeee;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+/* =========================
+   TABLE
+========================= */
+
+.reviewsTableWrap {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 18px;
+}
+
+.reviewsDataGrid {
+  min-width: 860px !important;
+  border: none !important;
+  font-family: "Roboto", sans-serif !important;
+  color: #121212 !important;
+}
+
+.reviewsDataGrid .MuiDataGrid-main {
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(227, 6, 5, 0.1);
+}
+
+.reviewsDataGrid .MuiDataGrid-columnHeaders {
+  min-height: 56px !important;
+  background: #121212 !important;
+  border-bottom: none !important;
+}
+
+.reviewsDataGrid .MuiDataGrid-columnHeader {
+  background: #121212 !important;
+  color: #ffffff !important;
+}
+
+.reviewsDataGrid .MuiDataGrid-columnHeaderTitle {
+  color: #ffffff !important;
+  font-size: 0.78rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.55px !important;
+  text-transform: uppercase !important;
+}
+
+.reviewsDataGrid .MuiDataGrid-iconButtonContainer svg,
+.reviewsDataGrid .MuiDataGrid-sortIcon {
+  color: #ffffff !important;
+}
+
+.reviewsDataGrid .MuiDataGrid-row {
+  border-bottom: 1px solid rgba(227, 6, 5, 0.08) !important;
+}
+
+.reviewsDataGrid .MuiDataGrid-row:hover {
+  background: rgba(227, 6, 5, 0.035) !important;
+}
+
+.reviewsDataGrid .MuiDataGrid-cell {
+  border-bottom: none !important;
+  color: #121212 !important;
+  font-size: 0.88rem !important;
+  font-weight: 600 !important;
+  outline: none !important;
+}
+
+.reviewsDataGrid .MuiDataGrid-footerContainer {
+  border-top: 1px solid rgba(227, 6, 5, 0.1) !important;
+  background: #ffffff;
+}
+
+.reviewIdCell {
+  max-width: 210px;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #555555;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.reviewUserCell {
+  color: #121212;
+  font-size: 0.9rem;
+  font-weight: 900;
+}
+
+.reviewCommentCell {
+  width: 100%;
+  max-width: 100%;
+  color: #555555;
+  font-size: 0.86rem;
+  font-weight: 600;
+  line-height: 1.45;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.reviewBadge,
+.reviewRatingBadge {
+  min-width: 62px;
+  height: 28px;
+  padding: 0 0.65rem;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  font-size: 0.76rem;
+  font-weight: 900;
+}
+
+.reviewRatingBadge svg {
+  font-size: 1rem;
+}
+
+.reviewGreenBadge {
+  background: rgba(18, 18, 18, 0.08);
+  color: #121212;
+}
+
+.reviewRedBadge {
+  background: rgba(227, 6, 5, 0.1);
+  color: #e30605;
+}
+
+.reviewActionButtons {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reviewDeleteButton {
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(227, 6, 5, 0.18);
+  background: #ffffff;
+  color: #121212;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.reviewDeleteButton:hover {
+  background: #e30605;
+  color: #ffffff;
+}
+
+.reviewDeleteButton svg {
+  font-size: 1.2rem;
+}
+
+/* =========================
+   EMPTY STATE
+========================= */
+
+.reviewsEmptyState {
+  width: 100%;
+  min-height: 260px;
+  border-radius: 18px;
+  background: rgba(227, 6, 5, 0.035);
+  border: 1px dashed rgba(227, 6, 5, 0.22);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.reviewsEmptyState svg {
+  color: #e30605;
+  font-size: 3rem;
+  margin-bottom: 0.8rem;
+}
+
+.reviewsEmptyState h3 {
+  margin: 0;
+  color: #121212;
+  font-family: "Archivo", sans-serif;
+  font-size: 1.35rem;
+  font-weight: 900;
+}
+
+.reviewsEmptyState p {
+  max-width: 420px;
+  margin: 0.6rem auto 0;
+  color: #555555;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 999px) {
+  .reviewsPage {
+    padding: 0.75rem 0.75rem 2rem;
+  }
+
+  .reviewsSidebar {
+    display: none;
+  }
+
+  .reviewsSidebarOpen {
+    display: block;
+    position: absolute;
+    z-index: 1000;
+    top: 72px;
+    left: 14px;
+    width: 16rem;
+    min-width: 16rem;
+    max-width: 16rem;
+    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.22);
+  }
+
+  .reviewsMain {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .reviewsHero {
+    border-radius: 18px;
+    padding: 1.1rem;
+  }
+
+  .reviewsHeroIcon {
+    width: 58px;
+    height: 58px;
+    border-radius: 18px;
+  }
+
+  .reviewsHeroIcon svg {
+    font-size: 2rem;
+  }
+
+  .reviewsStats {
+    grid-template-columns: 1fr;
+  }
+
+  .reviewStatCard {
+    min-height: 92px;
+  }
+
+  .reviewsSearchCard,
+  .reviewsTableCard {
+    padding: 1rem;
+    border-radius: 18px;
+  }
+
+  .reviewsSearchForm {
+    grid-template-columns: 1fr;
+  }
+
+  .reviewsSearchButton {
+    width: 100%;
+  }
+}
+
+@media (max-width: 560px) {
+  .reviewsPage {
+    padding: 0.55rem 0.55rem 1.5rem;
+  }
+
+  .reviewsHero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .reviewsHeroIcon {
+    display: none;
+  }
+
+  .reviewsHero p {
+    font-size: 0.88rem;
+  }
+
+  .reviewsSearchCard,
+  .reviewsTableCard {
+    padding: 0.85rem;
+  }
+
+  .reviewsSearchHeader,
+  .reviewsTableHeader {
+    padding: 0.85rem;
+  }
+
+  .reviewsSearchHeader h2,
+  .reviewsTableHeader h2 {
+    font-size: 1.1rem;
+  }
+
+  .reviewsInputWrap,
+  .reviewsInputWrap input {
+    height: 50px;
+  }
+
+  .reviewsDataGrid {
+    min-width: 820px !important;
+  }
+
+  .reviewDeleteButton {
+    width: 32px;
+    height: 32px;
+  }
+
+  .reviewsEmptyState {
+    min-height: 220px;
+    padding: 1.4rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .reviewsPage {
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+  }
+
+  .reviewsHero,
+  .reviewsSearchCard,
+  .reviewsTableCard {
+    border-radius: 16px;
+  }
+
+  .reviewsHero h1 {
+    font-size: 1.45rem;
+  }
+
+  .reviewStatCard {
+    padding: 0.85rem;
+  }
+
+  .reviewStatIcon {
+    width: 46px;
+    height: 46px;
+  }
+
+  .reviewStatCard strong {
+    font-size: 1.45rem;
+  }
+}

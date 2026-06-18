@@ -1,0 +1,83 @@
+# Dependencies
+node_modules/
+frontend/node_modules/
+
+# Environment / secrets
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+.env.*.local
+config.env
+backend/config/config.env
+
+# Keep example env files
+!*.env.example
+!backend/config/config.env.example
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Runtime / process files
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Build output
+dist/
+build/
+frontend/dist/
+frontend/build/
+
+# Vite
+.vite/
+frontend/node_modules/.vite/
+
+# Cache
+.cache/
+.parcel-cache/
+.eslintcache
+.stylelintcache
+
+# Coverage / tests
+coverage/
+.nyc_output/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-workspace
+*.sublime-project
+
+# Optional local uploads/temp
+uploads/
+tmp/
+temp/
+
+# Debug
+debug.log
+error.log
+
+# Package manager metadata
+.pnpm-store/
+
+# Vercel
+.vercel/
+
+# Netlify
+.netlify/

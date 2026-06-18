@@ -1,0 +1,726 @@
+.newProductPage {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 0 1rem 2rem;
+  background: linear-gradient(180deg, #ffffff 0%, #fff7f7 45%, #ffffff 100%);
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: "Roboto", sans-serif;
+  direction: ltr;
+}
+
+.newProductSidebar {
+  width: 20%;
+  min-width: 230px;
+  max-width: 280px;
+  height: fit-content;
+  background-color: #ffffff;
+  border: 1px solid rgba(227, 6, 5, 0.12);
+  border-radius: 18px;
+  box-shadow: 0 14px 34px rgba(227, 6, 5, 0.08);
+  overflow: hidden;
+  position: sticky;
+  top: 1rem;
+  flex-shrink: 0;
+}
+
+.newProductMain {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.newProductNavbar {
+  width: 100%;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.newProductHero {
+  width: 100%;
+  padding: 1.3rem 1.4rem;
+  border-radius: 22px;
+  background: linear-gradient(
+    135deg,
+    rgba(18, 18, 18, 0.96),
+    rgba(227, 6, 5, 0.86)
+  );
+  color: #ffffff;
+  box-shadow: 0 16px 38px rgba(227, 6, 5, 0.18);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.newProductHero::after {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  right: -80px;
+  top: -90px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.newProductHeroContent {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+}
+
+.newProductBadge {
+  width: fit-content;
+  margin: 0 0 0.7rem !important;
+  padding: 0.38rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff !important;
+  font-size: 0.72rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.8px !important;
+  text-transform: uppercase;
+}
+
+.newProductTitle {
+  margin: 0 !important;
+  color: #ffffff !important;
+  font-family: "Archivo", sans-serif !important;
+  font-size: clamp(1.65rem, 4vw, 2.7rem) !important;
+  font-weight: 900 !important;
+  line-height: 1.1 !important;
+  letter-spacing: -0.7px !important;
+}
+
+.newProductSubtitle {
+  max-width: 640px;
+  margin: 0.7rem 0 0 !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-size: 0.95rem !important;
+  line-height: 1.65 !important;
+  font-weight: 500 !important;
+}
+
+.newProductHeroIcon {
+  position: relative;
+  z-index: 1;
+  width: 74px !important;
+  height: 74px !important;
+  border-radius: 22px !important;
+  background: rgba(255, 255, 255, 0.12) !important;
+  color: #ffffff !important;
+  flex-shrink: 0;
+}
+
+.newProductHeroIcon svg {
+  font-size: 2.4rem !important;
+}
+
+/* =========================
+   FORM CARD
+========================= */
+
+.newProductFormCard {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 1.4rem;
+  border-radius: 22px;
+  background: #ffffff;
+  border: 1px solid rgba(227, 6, 5, 0.12);
+  box-shadow: 0 14px 34px rgba(227, 6, 5, 0.08);
+  box-sizing: border-box;
+  direction: ltr;
+}
+
+.newProductFormHeader {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1.3rem;
+  border-radius: 18px;
+  background: rgba(227, 6, 5, 0.035);
+  border: 1px solid rgba(227, 6, 5, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-sizing: border-box;
+}
+
+.newProductFormIcon {
+  width: 54px;
+  height: 54px;
+  border-radius: 18px;
+  background: rgba(227, 6, 5, 0.1);
+  color: #e30605;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.newProductFormIcon svg {
+  font-size: 1.9rem;
+}
+
+.newProductHeaderText {
+  min-width: 0;
+}
+
+.newProductFormTitle {
+  margin: 0 !important;
+  color: #121212 !important;
+  font-family: "Archivo", sans-serif !important;
+  font-size: 1.35rem !important;
+  font-weight: 900 !important;
+  text-transform: uppercase;
+}
+
+.newProductFormText {
+  margin: 0.35rem 0 0 !important;
+  color: #555555 !important;
+  font-size: 0.92rem !important;
+  font-weight: 500 !important;
+  line-height: 1.55 !important;
+}
+
+/* =========================
+   GRID + INPUTS
+========================= */
+
+.newProductGrid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.15rem 1.1rem;
+  margin-bottom: 1.15rem;
+}
+
+.newProductField {
+  width: 100%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  box-sizing: border-box;
+}
+
+.newProductField label {
+  display: block;
+  margin: 0;
+  color: #121212;
+  font-size: 0.82rem;
+  font-weight: 900;
+  line-height: 1.2;
+  letter-spacing: 0.35px;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.newProductInputWrap,
+.newProductSelectWrap,
+.newProductTextareaWrap {
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+  direction: ltr;
+}
+
+.newProductInputWrap input,
+.newProductInputWrap select,
+.newProductTextareaWrap textarea {
+  width: 100%;
+  border: 1px solid rgba(227, 6, 5, 0.22);
+  outline: none;
+  background: #ffffff;
+  color: #121212;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  direction: ltr;
+  text-align: left;
+}
+
+.newProductInputWrap input,
+.newProductInputWrap select {
+  height: 52px;
+  border-radius: 14px;
+  padding: 0 3.1rem 0 1rem;
+  line-height: 52px;
+}
+
+.newProductTextareaWrap textarea {
+  min-height: 130px;
+  max-height: 260px;
+  resize: vertical;
+  border-radius: 14px;
+  padding: 1rem 3.1rem 1rem 1rem;
+  line-height: 1.55;
+}
+
+.newProductInputWrap input::placeholder,
+.newProductTextareaWrap textarea::placeholder {
+  color: #8a8a8a;
+  font-weight: 500;
+}
+
+.newProductInputWrap input:focus,
+.newProductInputWrap select:focus,
+.newProductTextareaWrap textarea:focus {
+  border-color: #e30605;
+  box-shadow: 0 0 0 4px rgba(227, 6, 5, 0.08);
+}
+
+.newProductInputWrap select {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
+.newProductFieldIcon,
+.newProductTextareaIcon {
+  position: absolute;
+  right: 1rem;
+  color: #e30605 !important;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.newProductFieldIcon {
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.25rem !important;
+}
+
+.newProductTextareaIcon {
+  top: 1rem;
+  font-size: 1.25rem !important;
+}
+
+.newProductDescriptionField {
+  margin-bottom: 1.15rem;
+}
+
+/* =========================
+   IMAGE UPLOAD BOX FINAL FIX
+========================= */
+
+.newProductUploadBox {
+  width: 100%;
+  min-height: 132px;
+  padding: 1rem;
+  border-radius: 16px;
+  background: rgba(227, 6, 5, 0.035);
+  border: 1px solid rgba(227, 6, 5, 0.12);
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+.newProductUploadIcon {
+  width: 58px;
+  height: 58px;
+  min-width: 58px;
+  border-radius: 16px;
+  background: rgba(227, 6, 5, 0.1);
+  color: #e30605;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  direction: ltr !important;
+}
+
+.newProductUploadIcon svg {
+  font-size: 1.9rem;
+}
+
+.newProductUploadContent {
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start !important;
+  justify-content: center;
+
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+.newProductUploadTitle {
+  width: 100%;
+  margin: 0 !important;
+  color: #121212 !important;
+  font-family: "Archivo", sans-serif !important;
+  font-size: 1rem !important;
+  font-weight: 900 !important;
+  line-height: 1.25 !important;
+
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+.newProductUploadText {
+  width: 100%;
+  margin: 0.28rem 0 0.8rem !important;
+  color: #555555 !important;
+  font-size: 0.84rem !important;
+  font-weight: 500 !important;
+  line-height: 1.45 !important;
+
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+.newProductFileInput {
+  display: none;
+}
+
+.newProductUploadButton,
+.newProductUploadButton.MuiButton-root {
+  width: fit-content !important;
+  min-width: 165px !important;
+  min-height: 40px !important;
+  padding: 0 1.15rem !important;
+  border-radius: 999px !important;
+  background-color: #121212 !important;
+  color: #ffffff !important;
+  box-shadow: none !important;
+  font-size: 0.78rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.5px !important;
+  text-transform: uppercase !important;
+  white-space: nowrap !important;
+
+  align-self: flex-start !important;
+  justify-self: flex-start !important;
+
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-direction: row !important;
+
+  direction: ltr !important;
+  text-align: center !important;
+}
+
+.newProductUploadButton:hover {
+  background-color: #e30605 !important;
+}
+
+.newProductUploadButton svg {
+  color: #ffffff !important;
+}
+
+.newProductUploadButton .MuiButton-startIcon {
+  margin-left: 0 !important;
+  margin-right: 8px !important;
+  display: inherit !important;
+}
+
+/* =========================
+   IMAGE PREVIEW
+========================= */
+
+.newProductPreviewArea {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1.15rem;
+  border-radius: 18px;
+  background: rgba(227, 6, 5, 0.035);
+  border: 1px solid rgba(227, 6, 5, 0.1);
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 0.85rem;
+}
+
+.newProductPreviewImage {
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid rgba(227, 6, 5, 0.12);
+  background: #ffffff;
+}
+
+/* =========================
+   ACTIONS
+========================= */
+
+.newProductActions {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.newProductSubmitButton {
+  width: min(100%, 280px) !important;
+  min-height: 50px !important;
+  border-radius: 999px !important;
+  background-color: #e30605 !important;
+  color: #ffffff !important;
+  border: 2px solid #e30605 !important;
+  box-shadow: 0 10px 24px rgba(227, 6, 5, 0.22) !important;
+  font-size: 0.86rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.7px !important;
+  text-transform: uppercase !important;
+  transition: all 0.25s ease !important;
+}
+
+.newProductSubmitButton:hover {
+  background-color: #ffffff !important;
+  color: #e30605 !important;
+}
+
+.newProductSubmitButton.Mui-disabled {
+  background-color: #eeeeee !important;
+  border-color: #eeeeee !important;
+  color: #999999 !important;
+  box-shadow: none !important;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 999px) {
+  .newProductPage {
+    padding: 0 0.75rem 2rem;
+  }
+
+  .newProductSidebar {
+    display: none;
+  }
+
+  .newProductSidebarOpen {
+    display: block;
+    position: absolute;
+    z-index: 1000;
+    top: 58px;
+    left: 14px;
+    width: 16rem;
+    min-width: 16rem;
+    max-width: 16rem;
+    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.22);
+  }
+
+  .newProductMain {
+    width: 100%;
+  }
+
+  .newProductFormCard {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .newProductHero {
+    padding: 1.1rem;
+    border-radius: 18px;
+  }
+
+  .newProductHeroIcon {
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 18px !important;
+  }
+
+  .newProductHeroIcon svg {
+    font-size: 2rem !important;
+  }
+
+  .newProductFormCard {
+    padding: 1.1rem;
+    border-radius: 18px;
+  }
+
+  .newProductGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .newProductFormHeader {
+    align-items: flex-start;
+  }
+
+  .newProductUploadBox {
+    min-height: 118px;
+  }
+}
+
+@media (max-width: 560px) {
+  .newProductPage {
+    padding: 0 0.55rem 1.5rem;
+  }
+
+  .newProductHero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .newProductHeroIcon {
+    display: none !important;
+  }
+
+  .newProductSubtitle {
+    font-size: 0.88rem !important;
+  }
+
+  .newProductFormCard {
+    padding: 0.9rem;
+  }
+
+  .newProductFormHeader {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0.9rem;
+  }
+
+  .newProductFormIcon {
+    width: 48px;
+    height: 48px;
+    border-radius: 16px;
+  }
+
+  .newProductInputWrap input,
+  .newProductInputWrap select {
+    height: 50px;
+    line-height: 50px;
+    font-size: 0.9rem;
+  }
+
+  .newProductTextareaWrap textarea {
+    min-height: 120px;
+    font-size: 0.9rem;
+  }
+
+  .newProductUploadBox {
+    min-height: auto;
+    flex-direction: column;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 1rem;
+    direction: ltr !important;
+  }
+
+  .newProductUploadIcon {
+    width: 54px;
+    height: 54px;
+    min-width: 54px;
+  }
+
+  .newProductUploadContent {
+    width: 100%;
+    align-items: center !important;
+    text-align: center !important;
+    direction: ltr !important;
+  }
+
+  .newProductUploadTitle,
+  .newProductUploadText {
+    text-align: center !important;
+    direction: ltr !important;
+  }
+
+  .newProductUploadButton,
+  .newProductUploadButton.MuiButton-root {
+    width: 100% !important;
+    max-width: 230px !important;
+    min-width: 0 !important;
+    align-self: center !important;
+    justify-self: center !important;
+    flex-direction: row !important;
+    direction: ltr !important;
+  }
+
+  .newProductUploadButton .MuiButton-startIcon {
+    margin-left: 0 !important;
+    margin-right: 8px !important;
+  }
+
+  .newProductPreviewArea {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 0.8rem;
+  }
+
+  .newProductPreviewImage {
+    height: 100px;
+  }
+
+  .newProductActions {
+    justify-content: center;
+  }
+
+  .newProductSubmitButton {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .newProductPage {
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+  }
+
+  .newProductHero,
+  .newProductFormCard {
+    border-radius: 16px;
+  }
+
+  .newProductTitle {
+    font-size: 1.45rem !important;
+  }
+
+  .newProductFormTitle {
+    font-size: 1.05rem !important;
+  }
+
+  .newProductInputWrap input,
+  .newProductInputWrap select {
+    padding-left: 0.85rem;
+    padding-right: 2.7rem;
+  }
+
+  .newProductTextareaWrap textarea {
+    padding-left: 0.85rem;
+    padding-right: 2.7rem;
+  }
+
+  .newProductFieldIcon,
+  .newProductTextareaIcon {
+    right: 0.85rem;
+  }
+
+  .newProductPreviewArea {
+    grid-template-columns: 1fr;
+  }
+
+  .newProductPreviewImage {
+    height: 170px;
+  }
+}

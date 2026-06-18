@@ -1,0 +1,646 @@
+.productListPage {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 0 1rem 2rem;
+  background: linear-gradient(180deg, #ffffff 0%, #fff7f7 45%, #ffffff 100%);
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: "Roboto", sans-serif;
+}
+
+.productListSidebar {
+  width: 20%;
+  min-width: 230px;
+  max-width: 280px;
+  height: fit-content;
+  background-color: #ffffff;
+  border: 1px solid rgba(227, 6, 5, 0.12);
+  border-radius: 18px;
+  box-shadow: 0 14px 34px rgba(227, 6, 5, 0.08);
+  overflow: hidden;
+  position: sticky;
+  top: 1rem;
+  flex-shrink: 0;
+}
+
+.productListMain {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.productListNavbar {
+  width: 100%;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.productListHero {
+  width: 100%;
+  padding: 1.3rem 1.4rem;
+  border-radius: 22px;
+  background: linear-gradient(
+    135deg,
+    rgba(18, 18, 18, 0.96),
+    rgba(227, 6, 5, 0.86)
+  );
+  color: #ffffff;
+  box-shadow: 0 16px 38px rgba(227, 6, 5, 0.18);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.productListHero::after {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  right: -80px;
+  top: -90px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.productListHeroContent {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+}
+
+.productListBadge {
+  width: fit-content;
+  margin: 0 0 0.7rem;
+  padding: 0.38rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.productListHero h1 {
+  margin: 0;
+  color: #ffffff;
+  font-family: "Archivo", sans-serif;
+  font-size: clamp(1.65rem, 4vw, 2.7rem);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.7px;
+}
+
+.productListHero p {
+  max-width: 620px;
+  margin: 0.7rem 0 0;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  font-weight: 500;
+}
+
+.productListHeroIcon {
+  position: relative;
+  z-index: 1;
+  width: 74px;
+  height: 74px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.productListHeroIcon svg {
+  font-size: 2.4rem;
+}
+
+/* =========================
+   STATS
+========================= */
+
+.productListStats {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.productStatCard {
+  min-height: 105px;
+  padding: 1rem;
+  border-radius: 18px;
+  background: #ffffff;
+  border: 1px solid rgba(227, 6, 5, 0.12);
+  box-shadow: 0 12px 28px rgba(227, 6, 5, 0.07);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.productStatIcon {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: rgba(227, 6, 5, 0.1);
+  color: #e30605;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.productStatIcon svg {
+  font-size: 1.8rem;
+}
+
+.productStatCard span {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: #555555;
+  font-size: 0.82rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.productStatCard strong {
+  color: #121212;
+  font-family: "Archivo", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.productStatCard.dangerStat .productStatIcon {
+  background: rgba(227, 6, 5, 0.14);
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.productListContainer {
+  width: 100%;
+  padding: 1.2rem;
+  border-radius: 22px;
+  background: #ffffff;
+  border: 1px solid rgba(227, 6, 5, 0.12);
+  box-shadow: 0 14px 34px rgba(227, 6, 5, 0.08);
+  box-sizing: border-box;
+}
+
+.productListHeader {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 18px;
+  background: rgba(227, 6, 5, 0.035);
+  border: 1px solid rgba(227, 6, 5, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  box-sizing: border-box;
+}
+
+#productListHeading {
+  margin: 0;
+  color: #121212;
+  font-family: "Archivo", sans-serif;
+  font-size: 1.35rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.3px;
+}
+
+.productListHeader p {
+  margin: 0.35rem 0 0;
+  color: #555555;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.addProductBtn {
+  min-height: 44px;
+  padding: 0 1.1rem;
+  border-radius: 999px;
+  background: #e30605;
+  color: #ffffff;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  font-size: 0.82rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  white-space: nowrap;
+  box-shadow: 0 10px 24px rgba(227, 6, 5, 0.2);
+  transition: all 0.22s ease;
+}
+
+.addProductBtn:hover {
+  background: #121212;
+  color: #ffffff;
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+.addProductBtn svg {
+  font-size: 1.15rem;
+}
+
+/* =========================
+   SEARCH
+========================= */
+
+.productListToolbar {
+  width: 100%;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.productSearchBox {
+  width: min(100%, 520px);
+  height: 48px;
+  padding: 0 1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(227, 6, 5, 0.16);
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  box-sizing: border-box;
+  box-shadow: 0 8px 20px rgba(227, 6, 5, 0.05);
+}
+
+.productSearchBox svg {
+  color: #e30605;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.productSearchBox input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  color: #121212;
+  font-size: 0.92rem;
+  font-weight: 600;
+  background: transparent;
+}
+
+.productSearchBox input::placeholder {
+  color: #888888;
+  font-weight: 500;
+}
+
+/* =========================
+   DATAGRID
+========================= */
+
+.productListTableWrap {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 18px;
+}
+
+.productListTable {
+  min-width: 760px !important;
+  border: none !important;
+  font-family: "Roboto", sans-serif !important;
+  color: #121212 !important;
+}
+
+.productListTable .MuiDataGrid-main {
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(227, 6, 5, 0.1);
+}
+
+.productListTable .MuiDataGrid-columnHeaders {
+  min-height: 56px !important;
+  background: #121212 !important;
+  border-bottom: none !important;
+}
+
+.productListTable .MuiDataGrid-columnHeader {
+  background: #121212 !important;
+  color: #ffffff !important;
+}
+
+.productListTable .MuiDataGrid-columnHeaderTitle {
+  color: #ffffff !important;
+  font-size: 0.78rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.55px !important;
+  text-transform: uppercase !important;
+}
+
+.productListTable .MuiDataGrid-iconButtonContainer svg,
+.productListTable .MuiDataGrid-sortIcon {
+  color: #ffffff !important;
+}
+
+.productListTable .MuiDataGrid-row {
+  border-bottom: 1px solid rgba(227, 6, 5, 0.08) !important;
+}
+
+.productListTable .MuiDataGrid-row:hover {
+  background: rgba(227, 6, 5, 0.035) !important;
+}
+
+.productListTable .MuiDataGrid-cell {
+  border-bottom: none !important;
+  color: #121212 !important;
+  font-size: 0.88rem !important;
+  font-weight: 600 !important;
+  outline: none !important;
+}
+
+.productListTable .MuiDataGrid-footerContainer {
+  border-top: 1px solid rgba(227, 6, 5, 0.1) !important;
+  background: #ffffff;
+}
+
+.productIdCell {
+  max-width: 210px;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #555555;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.productNameCell {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.18rem;
+}
+
+.productNameCell span {
+  color: #121212;
+  font-size: 0.9rem;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.productNameCell small {
+  color: #e30605;
+  font-size: 0.75rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.productStockBadge {
+  min-width: 52px;
+  height: 28px;
+  padding: 0 0.65rem;
+  border-radius: 999px;
+  background: rgba(18, 18, 18, 0.08);
+  color: #121212;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.76rem;
+  font-weight: 900;
+}
+
+.productStockBadge.productStockOut {
+  background: rgba(227, 6, 5, 0.1);
+  color: #e30605;
+}
+
+.productPriceCell {
+  color: #121212;
+  font-weight: 900;
+}
+
+.productActionButtons {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+}
+
+.productEditButton,
+.productDeleteButton {
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(227, 6, 5, 0.18);
+  background: #ffffff;
+  color: #121212;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.productEditButton:hover {
+  background: #121212;
+  color: #ffffff;
+}
+
+.productDeleteButton:hover {
+  background: #e30605;
+  color: #ffffff;
+}
+
+.productEditButton svg,
+.productDeleteButton svg {
+  font-size: 1.2rem;
+}
+
+/* =========================
+   OLD CLASS SUPPORT
+========================= */
+
+.product-list {
+  width: 100%;
+}
+
+.listSidebar {
+  width: 20%;
+}
+
+.list-table {
+  width: 100%;
+}
+
+.icon-,
+.iconbtn {
+  color: inherit;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 999px) {
+  .productListPage {
+    padding: 0 0.75rem 2rem;
+  }
+
+  .productListSidebar {
+    display: none;
+  }
+
+  .productListSidebarOpen {
+    display: block;
+    position: absolute;
+    z-index: 1000;
+    top: 58px;
+    left: 14px;
+    width: 16rem;
+    min-width: 16rem;
+    max-width: 16rem;
+    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.22);
+  }
+
+  .productListMain {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .productListHero {
+    border-radius: 18px;
+    padding: 1.1rem;
+  }
+
+  .productListHeroIcon {
+    width: 58px;
+    height: 58px;
+    border-radius: 18px;
+  }
+
+  .productListHeroIcon svg {
+    font-size: 2rem;
+  }
+
+  .productListStats {
+    grid-template-columns: 1fr;
+  }
+
+  .productStatCard {
+    min-height: 92px;
+  }
+
+  .productListContainer {
+    padding: 1rem;
+    border-radius: 18px;
+  }
+
+  .productListHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .addProductBtn {
+    width: 100%;
+  }
+
+  .productSearchBox {
+    width: 100%;
+  }
+}
+
+@media (max-width: 560px) {
+  .productListPage {
+    padding: 0 0.55rem 1.5rem;
+  }
+
+  .productListHero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .productListHeroIcon {
+    display: none;
+  }
+
+  .productListHero p {
+    font-size: 0.88rem;
+  }
+
+  .productListContainer {
+    padding: 0.85rem;
+  }
+
+  #productListHeading {
+    font-size: 1.15rem;
+  }
+
+  .productSearchBox {
+    height: 46px;
+    border-radius: 14px;
+  }
+
+  .productListTable {
+    min-width: 720px !important;
+  }
+
+  .productActionButtons {
+    gap: 0.45rem;
+  }
+
+  .productEditButton,
+  .productDeleteButton {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media (max-width: 380px) {
+  .productListPage {
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+  }
+
+  .productListHero,
+  .productListContainer {
+    border-radius: 16px;
+  }
+
+  .productListHero h1 {
+    font-size: 1.45rem;
+  }
+
+  .productStatCard {
+    padding: 0.85rem;
+  }
+
+  .productStatIcon {
+    width: 46px;
+    height: 46px;
+  }
+
+  .productStatCard strong {
+    font-size: 1.45rem;
+  }
+}

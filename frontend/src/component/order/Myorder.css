@@ -1,0 +1,86 @@
+.myOrdersPage {
+  width: min(1180px, calc(100% - 2rem));
+  max-width: 100%;
+  min-height: calc(100vh - 8rem);
+  padding: 1.2rem;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border: 1px solid rgba(227, 6, 5, 0.14);
+  border-radius: 22px;
+  box-shadow: 0 14px 34px rgba(227, 6, 5, 0.08);
+  display: flex;
+  flex-direction: column;
+  margin: 8rem auto 3rem;
+  overflow: hidden;
+  font-family: "Roboto", sans-serif;
+}
+
+#myOrdersHeading {
+  text-align: center;
+  font: 900 1.15rem "Roboto";
+  padding: 1rem;
+  box-sizing: border-box;
+  color: #ffffff;
+  background: linear-gradient(135deg, #121212, #e30605);
+  border-radius: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  margin: 0 0 1rem;
+}
+
+.myOrdersTable {
+  background-color: white;
+  border: none !important;
+  min-width: 720px;
+}
+
+.myOrdersTable div {
+  font: 600 0.9rem "Roboto";
+  color: #444444;
+  border: none;
+}
+
+.myOrdersTable a {
+  color: #121212;
+  transition: color 0.25s ease;
+}
+
+.myOrdersTable a:hover {
+  color: #e30605;
+}
+
+.myOrdersPage .MuiDataGrid-root {
+  border: 1px solid rgba(227, 6, 5, 0.12) !important;
+  border-radius: 16px !important;
+  overflow: auto !important;
+}
+
+.myOrdersPage .MuiDataGrid-columnHeaders,
+.myOrdersPage .MuiDataGrid-columnHeader {
+  background-color: #121212 !important;
+  color: #ffffff !important;
+}
+
+.myOrdersPage .MuiDataGrid-columnHeaderTitle {
+  color: #ffffff !important;
+  font: 900 0.85rem "Roboto" !important;
+  text-transform: uppercase;
+}
+
+.myOrdersPage .MuiDataGrid-iconSeparator {
+  display: none !important;
+}
+
+@media screen and (max-width: 768px) {
+  .myOrdersPage {
+    width: calc(100% - 1rem);
+    margin-top: 7rem;
+    padding: 0.8rem;
+    border-radius: 18px;
+  }
+
+  #myOrdersHeading {
+    font-size: 1rem;
+    padding: 0.85rem;
+  }
+}

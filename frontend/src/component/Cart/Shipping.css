@@ -1,0 +1,51 @@
+.shippingPage {
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+  padding: 8rem 1rem 4rem;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.shippingPage form,
+.shippingPage .shippingForm {
+  width: min(560px, 100%);
+  margin: 0 auto;
+}
+
+.shippingPage .MuiTextField-root,
+.shippingPage .MuiFormControl-root {
+  width: 100%;
+}
+
+select {
+  border: 1px solid rgba(227, 6, 5, 0.2);
+  width: 100%;
+  max-width: 100%;
+  min-height: 52px;
+  font-size: 16px;
+  padding: 0.8rem 1rem;
+  overflow: hidden;
+  border-radius: 14px;
+  background: #ffffff;
+  color: #121212;
+  box-sizing: border-box;
+  outline: none;
+}
+
+select:focus {
+  border-color: #e30605;
+  box-shadow: 0 0 0 4px rgba(227, 6, 5, 0.08);
+}
+
+@media screen and (max-width: 600px) {
+  .shippingPage {
+    padding: 6.8rem 0.55rem 3rem;
+  }
+
+  select {
+    font-size: 15px;
+    padding: 0.7rem 0.85rem;
+  }
+}
