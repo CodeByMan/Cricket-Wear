@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🏏 Cricket Wear — MERN E-Commerce Store
+# 🏏 Cricket Wear — E-Commerce Store
 
 A modern full-stack **Cricket E-Commerce Platform** built with **React, Vite, Redux, Material UI, Node.js, Express.js, MongoDB, Mongoose, JWT Authentication, Stripe, Cloudinary, and Nodemailer**.  
 Cricket Wear helps customers browse cricket products, manage cart and checkout, place orders, write reviews, and allows admins to manage products, orders, users, reviews, and dashboard analytics from a polished responsive admin panel.
