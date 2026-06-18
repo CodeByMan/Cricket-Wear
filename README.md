@@ -22,8 +22,6 @@ Cricket Wear helps customers browse cricket products, manage cart and checkout, 
 
 The platform includes a customer-facing store and a role-based admin dashboard. Customers can browse products, search/filter items, add products to cart, checkout, place orders, view order history, and manage their profile. Admin users can manage products, orders, users, reviews, and view store dashboard analytics.
 
-This project is designed as a practical **Junior MERN Stack Developer portfolio project** because it demonstrates full-stack CRUD, authentication, authorization, REST APIs, MongoDB modeling, Redux state management, file upload handling, payment integration, and responsive UI development.
-
 ---
 
 ## ✨ Premium Features
@@ -53,21 +51,18 @@ This project is designed as a practical **Junior MERN Stack Developer portfolio 
 
 ## 🖼️ Screenshots
 
-| Home Page |
-|-------------|
-| ![Home Page](docs/screenshots/homepage.png) |
-
-| Login | Products |
+| Home Page | Admin Dashboard |
 |-----------|-------------|
-| ![Login](docs/screenshots/login.png) | ![Products](docs/screenshots/product.png) |
+| ![Home Page](docs/screenshots/homepage.png) | ![Admin Dashboard](docs/screenshots/dashboard.png) |
 
-| Product Details | Cart |
-|------------------|------|
-| ![Product Details](docs/screenshots/productdetail.png) | ![Cart](docs/screenshots/cart.png) |
+| Login | Cart |
+|-----------|-------------|
+| ![Login](docs/screenshots/login.png) | ![Cart](docs/screenshots/cart.png) |
 
-| Admin Dashboard |
-|-----------------|
-| ![Admin Dashboard](docs/screenshots/dashboard.png) |
+| Products | Product DetailsCart |
+|-----------|-------------|
+| ![Products](docs/screenshots/product.png) | ![Product Details](docs/screenshots/productdetail.png) |
+
 
 ---
 
@@ -577,39 +572,10 @@ All backend API routes are prefixed with:
 
 ---
 
-## 🧪 Portfolio Quality Notes
-
-This project is suitable for a **Junior MERN Stack Developer portfolio** because it includes:
-
-- Complete MERN architecture
-- REST API development
-- MongoDB schemas
-- JWT auth and admin authorization
-- Product CRUD
-- Order workflow
-- Cart and checkout
-- Stripe integration
-- Dashboard analytics
-- Responsive React UI
-- Redux state management
-
-Before publishing publicly, make sure to:
-
-- Remove `node_modules`
-- Remove `frontend/dist`
-- Remove real `.env` / `config.env` secrets
-- Keep only `.env.example` / `config.env.example`
-- Rotate any credentials that were previously committed
-- Update screenshots if UI changes
-- Test all admin pages after final UI fixes
-
----
-
 ## 🧑‍💻 Author
 
 **Muhammad Ali Nawaz**  
 MERN Stack Developer  
-Karachi, Pakistan
 
 ---
 
